@@ -297,6 +297,7 @@ label = %date% %time%
 [module/pulseaudio]
 type = internal/pulseaudio
  
+sink = alsa_output.usb-E1DA_E1DA__9038D_PCM32_384_DSD256_CTUA181119A-00.analog-stereo
 format-volume = <label-volume> <bar-volume>
 label-volume = VOL %percentage%%
 label-volume-foreground = ${root.foreground}
@@ -331,17 +332,18 @@ margin-bottom = 5
 
 [module/spotify-prev]
 type = custom/script
-exec = echo "←"
+exec = echo "← "
 click-left = spoticontrol -p
 
 [module/spotify-play-pause]
 type = custom/script
-exec = echo "II"
+exec = echo "»«"
+
 click-left = spoticontrol -s
 
 [module/spotify-next]
 type = custom/script
-exec = echo "→"
+exec = echo " →"
 click-left = spoticontrol -n
 
 
